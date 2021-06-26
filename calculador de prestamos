@@ -27,7 +27,7 @@ print("De lo contrario presione 0")
 clearing=int(input(" "))
 q=salario/5
 
-if q<VC and clearing>1:
-    print("Préstamo no aprobado")
-else:
+if q<VC and clearing>0:
     print("Préstamo aprobado")
+else:
+    print("Préstamo no aprobado")
