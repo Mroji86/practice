@@ -1,0 +1,33 @@
+print ("Préstamos con interés anual")
+m=float(input("Ingrese monto solicitado:"))
+n=float(input("Ingrese el nro de cuotas (minimo 6, máximo 36): "))
+i=float(input("Ingrese la tasa de interes: "))
+if n<13:
+    i=i
+else:
+    12<n<25
+    i=i*2
+    if 24<n<37:
+        i=i*3
+
+
+VC= (m*(1+(i/100)))/n
+
+montoTotalIntereses=VC*n-m
+
+print("El valor de la cuota es : %.2f"%VC,"pesos uruguayos.")
+print("Monto total de intereses es: %.2f"%montoTotalIntereses,"pesos uruguayos.")
+
+salario=float(input("Ingrese su salario en pesos uruguayos: "))
+
+print ("Clearing de informes")
+print("Si se encuentra en el clearing presione 1")
+print("De lo contrario presione 0")
+
+clearing=int(input(" "))
+q=salario/5
+
+if q<VC and clearing>1:
+    print("Préstamo no aprobado")
+else:
+    print("Préstamo aprobado")
